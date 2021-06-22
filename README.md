@@ -12,7 +12,7 @@ Otras Guías de Estilos
 
 ## Table of Contents
 
-1. [Historia](#1-Historia)
+1. [Historia](#historia)
 2. [Enlazar CSS a HTML](#enlazar-css-a-html)
 3. [Sintaxis de CSS](#sintaxis-de-css)
 4. [Selectores](#selectores)
@@ -23,7 +23,7 @@ Otras Guías de Estilos
 9. [Resources](#resources)
 10. [Custom Properties](#custom-properties)
 11. [Metodologias CSS](#metodologias-css)
-12. [Source](#Source)
+12. [Source](#source)
 
 ---
 
@@ -34,7 +34,7 @@ Otras Guías de Estilos
 -   **Cascada**
 -   **Especifidad**
 
-## 1 Historia
+## Historia
 
 Aqui te muestro una timeline de CSS
 
@@ -111,7 +111,7 @@ Existen varias maneras de hacer linking CSS to HTML:
 
 [⬆ back to top](#table-of-contents)
 
-## 3. Sintaxis de CSS
+## Sintaxis de CSS
 
 Esta es la infografía mejor explicada.
 
