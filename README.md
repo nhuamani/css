@@ -9,6 +9,7 @@ Otras Guías de Estilos
 -   [HTML](https://github.com/nhuamani/html)
 -   [JavaScript](https://github.com/nhuamani/javascript)
 -   [GIT](https://github.com/nhuamani/git)
+-   [SASS]((https://github.com/nhuamani/css/sass)
 
 ## Table of Contents
 
@@ -122,9 +123,9 @@ Esta es la infografía mejor explicada.
 
 > Especificación
 
--   [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/){:target="_blank"}
--   [Level 4](https://www.w3.org/TR/selectors-4/){:target="_blank"}
--   [List of All Levels](https://css4-selectors.com/selectors/){:target="_blank"}
+-   [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/)
+-   [Level 4](https://www.w3.org/TR/selectors-4/)
+-   [List of All Levels](https://css4-selectors.com/selectors/)
 
 <hr>
 
@@ -410,8 +411,8 @@ _[⬆ back to top](#table-of-contents)_
 
 ## Source
 
--   [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html){target="_blank"}
--   [Airbnb CSS / Sass Style Guide](https://github.com/airbnb/css target="_blank")
--   [Mozilla Developer Network](https://developer.mozilla.org/es/docs/Web/CSS?target="_blank")
+-   [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
+-   [Airbnb CSS / Sass Style Guide](https://github.com/airbnb/css)
+-   [Mozilla Developer Network](https://developer.mozilla.org/es/docs/Web/CSS)
 
 _[⬆ back to top](#table-of-contents)_
