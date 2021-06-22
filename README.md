@@ -411,7 +411,7 @@ _[⬆ back to top](#table-of-contents)_
 ## Source
 
 -   [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html){target="_blank"}
--   [Airbnb CSS / Sass Style Guide](https://github.com/airbnb/css){:target="_blank"}
--   [Mozilla Developer Network]("https://developer.mozilla.org/es/docs/Web/CSS" target="_blank")
+-   [Airbnb CSS / Sass Style Guide](https://github.com/airbnb/css target="_blank")
+-   [Mozilla Developer Network](https://developer.mozilla.org/es/docs/Web/CSS?target="_blank")
 
 _[⬆ back to top](#table-of-contents)_
