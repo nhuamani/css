@@ -43,7 +43,7 @@ Aqui te muestro una timeline de CSS
 -   [The future of style (_Future_)](https://www.w3.org/Style/CSS/Planet/)
 -   [Challenges for CSS](https://www.w3.org/Style/CSS20/challenges.html)
 
-[⬆ back to top](#table-of-contents)
+[⇡ back to top](#table-of-contents)
 
 ## Enlazar CSS a HTML
 
@@ -111,7 +111,7 @@ Existen varias maneras de hacer linking CSS to HTML:
     @import url('styles.css');
     ```
 
-[⬆ back to top](#table-of-contents)
+[⇡ back to top](#table-of-contents)
 
 ## Sintaxis de CSS
 
@@ -292,7 +292,7 @@ Esta es la infografía mejor explicada.
 
 > ℹ Especificación: [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/) │ [Level 4](https://www.w3.org/TR/selectors-4/) │ [List of All Levels](https://css4-selectors.com/selectors/)
 
-[⬆ back to top](#table-of-contents)
+[⇡ back to top](#table-of-contents)
 
 ## Herencia
 
@@ -315,7 +315,7 @@ a {
 }
 ```
 
-[⬆ back to top](#table-of-contents)
+[⇡ back to top](#table-of-contents)
 
 ## Especificidad
 
@@ -336,7 +336,7 @@ El nivel de especifidad es de la sigueinte forma:
 
 [Graficar especificidad](https://jonassebastianohlsson.com/specificity-graph/)
 
-[⬆ back to top](#table-of-contents)
+[⇡ back to top](#table-of-contents)
 
 ## Cascada
 
@@ -357,7 +357,7 @@ La cascada soluciona los conflictos cuando varias declaraciones afectan a un ele
 
 -   > **Nota:** El body por defecto tiene un `font-size: 16px`
 
-[⬆ back to top](#table-of-contents)
+[⇡ back to top](#table-of-contents)
 
 ### Propiedades
 
@@ -390,13 +390,13 @@ Si el nombre de la fuente tiene mas de dos letras se recominda poner entre comil
   }
 ```
 
-_[⬆ back to top](#table-of-contents)_
+[⇡ back to top](#table-of-contents)
 
 ## Custom Properties
 
 ### Variables CSS
 
-**[⬆ back to top](#table-of-contents)**
+[⇡ back to top](#table-of-contents)
 
 ## Metodologias CSS
 
@@ -404,7 +404,7 @@ _[⬆ back to top](#table-of-contents)_
 -   BEM
 -   OOCSS
 
-[⬆ back to top](#table-of-contents)
+[⇡ back to top](#table-of-contents)
 
 ## Source
 
@@ -412,4 +412,4 @@ _[⬆ back to top](#table-of-contents)_
 -   [Airbnb CSS / Sass Style Guide](https://github.com/airbnb/css)
 -   [Mozilla Developer Network](https://developer.mozilla.org/es/docs/Web/CSS)
 
-_[⬆ back to top](#table-of-contents)_
+[☝ back to top](#table-of-contents)
