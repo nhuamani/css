@@ -1,1 +1,0 @@
-# Learning Sass [![Date](https://img.shields.io/badge/Date-18%2F07%2F2020-success)](http://www.fechadehoy.com/mexico)

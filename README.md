@@ -123,14 +123,6 @@ Esta es la infografía mejor explicada.
 
 ## Selectores
 
-> Especificación
-
--   [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/)
--   [Level 4](https://www.w3.org/TR/selectors-4/)
--   [List of All Levels](https://css4-selectors.com/selectors/)
-
-<hr>
-
 ### Selectores Simples
 
 -   **Selector Universal `*`:** Selecciona a todos los elementos.
@@ -298,6 +290,8 @@ Esta es la infografía mejor explicada.
     }
     ```
 
+> ℹ Especificación: [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/) │ [Level 4](https://www.w3.org/TR/selectors-4/) │ [List of All Levels](https://css4-selectors.com/selectors/)
+
 [⬆ back to top](#table-of-contents)
 
 ## Herencia
@@ -352,11 +346,11 @@ La cascada soluciona los conflictos cuando varias declaraciones afectan a un ele
 
 ### Unidades de medida para fuentes
 
-| Unidades | tamaño                                                              |
+| Unidad | Tamaño                                                             |
 | -------- | ------------------------------------------------------------------- |
 | px       | `absoluto`                                                          |
 | em       | `relativo al contexto`                                              |
-| rem      | `relativo al <html></html>`                                         |
+| rem      | `relativo al <html></html> viene de *Root EM*`                                         |
 | %        | `tamaño normal de una fuente`                                       |
 | vh       | `1vh es 1% del height del viewport(area disponible que se muestra)` |
 | vw       | `1vh = 1% del width del viewport`                                   |
