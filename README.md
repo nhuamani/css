@@ -1,8 +1,8 @@
 # Learning CSS / Sass [![Date](https://img.shields.io/badge/Date-18%2F07%2F2020-success)](http://www.fechadehoy.com/mexico)
 
-_Apuntes de mi aprendizaje en HTML5._
+_Apuntes de mi aprendizaje en CSS y Sass._
 
-> **C**ascading **S**tyle **S**heets, _(en español: Hojas de Estilos en Cascadas)_ es un lenguaje que define el estilo visual de las páginas web; CSS establece `¿cómo?` se muestra.
+> **C**ascading **S**tyle **S**heets, _(en español: Hojas de Estilos en Cascadas)_ según la definición de la W3C: "se encarga de describir el rendirizado de documentos estructurados HTML, XML y SVG"; es un lenguaje que define el estilo visual de las páginas web, CSS establece `¿cómo?` se muestra.
 
 Otras Guías de Estilos
 
@@ -12,16 +12,17 @@ Otras Guías de Estilos
 
 ## Table of Contents
 
-1. [Vincular HTML y CSS](#vincular-html-y-css)
-2. [Selectores](#selectores)
-3. [Herencia](#herencia)
-4. [Especificidad](#especificidad)
-5. [Cascada](#cascada)
-6. [Texto](#texto)
-7. [Resources](#resources)
-8. [Variables CSS](#variables-css)
-9. [Metodologias CSS](#metodologias-css)
-10. [Source](#Source)
+1. [Historia](#Historia)
+2. [Enlazar CSS a HTML](#enlazar-css-a-html)
+3. [Selectores](#selectores)
+4. [Herencia](#herencia)
+5. [Especificidad](#especificidad)
+6. [Cascada](#cascada)
+7. [Texto](#texto)
+8. [Resources](#resources)
+9. [Custom Properties](#custom-properties)
+10. [Metodologias CSS](#metodologias-css)
+11. [Source](#Source)
 
 ---
 
@@ -32,130 +33,275 @@ Otras Guías de Estilos
 -   **Cascada**
 -   **Especifidad**
 
-## Vincular HTML y CSS
+## Historia
 
-Existen varias maneras de vincular CSS a HTML:
+Aqui te muestro una timeline de CSS
 
-```html
-...
-<!-- 1° forma-->
-<link rel="stylesheet" href="style.css" />
+-   [History of CSS (_Past_)](https://www.w3.org/Style/CSS20/history.html)
+-   [CSS Snapshot 2018 (_Present_)](https://www.w3.org/TR/css-2018/)
+-   [The future of style (_Future_)](https://www.w3.org/Style/CSS/Planet/)
+-   [Challenges for CSS](https://www.w3.org/Style/CSS20/challenges.html)
 
-<!-- 2° forma-->
-<style>
+## Enlazar CSS a HTML
+
+Existen varias maneras de hacer linking CSS to HTML:
+
+-   Inline
+
+    ```html
+    <!-- 1° forma Inline-->
+    <body style="color: lemon;"></body>
+    ```
+
+-   Embedded
+
+    ```html
+    <!-- 2° forma embedded-->
+    <head>
+        <style>
+            body {
+                color: tomato;
+            }
+        </style>
+    </head>
+    ```
+
+-   Extern (**Recomendado**: Primero tienes que tener el archivo en un mismo directorio.
+
+    ```bash
+    | myproject
+    |     styles.css
+    |     index.html
+    ```
+
+    En `styles.css` debemos tener al menor una regla de CSS.
+
+    ```css
     body {
-        color: tomato;
+        background: #272822;
+        color: #f92672;
     }
-</style>
+    ```
 
-<!-- 3° forma-->
-<body style="color: lemon;">
-    <!-- 4° forma-->
-    <style>
-        @import url("styles.css");
-    </style>
-    ...
-</body>
-```
+    ```html
+    <!-- 3° forma extern-->
+
+    <!-- En HTML -->
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <!-- Otra forma (no recomendado) -->
+    <head>
+        <style>
+            @import url('styles.css');
+        </style>
+    </head>
+    ```
+
+-   En CSS
+
+    En CSS tambien podemos importar de la misma forma solo basta poner la **_at-rules_** `@import`.
+
+    ```css
+    /* En CSS */
+    @import url('styles.css');
+    ```
 
 [⬆ back to top](#table-of-contents)
 
+## Sintaxis de CSS
+
+Esta es la infografía mejor explicada.
+
+![](https://edteam-media.s3.amazonaws.com/community/original/2b459054-9ca1-4731-9786-2e92d810c824.jpg)
+
+> Si quieres mas detalles revisa en el siguiente enlace. [CSS Bucabulary](http://apps.workflower.fi/vocabs/css/en#rule-set)
+
 ## Selectores
 
-> Especifiación
+> Especificación
 
--   [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/)
--   [Level 4](https://www.w3.org/TR/selectors-4/)
--   [List of All Levels](https://css4-selectors.com/selectors/)
+-   [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/){:target="_blank"}
+-   [Level 4](https://www.w3.org/TR/selectors-4/){:target="_blank"}
+-   [List of All Levels](https://css4-selectors.com/selectors/){:target="_blank"}
 
 <hr>
 
--   **Selector Universal:** Selecciona a todos los elementos.
+### Selectores Simples
+
+-   **Selector Universal `*`:** Selecciona a todos los elementos.
     -   _Ejemplos:_
     ```CSS
     * {
         color: tomato;
     }
     ```
--   **Selectores de Tipo (etiqueta):** Selecciona a la etiqueta definida.
+-   **Selectores de Tipo `<body>`(etiqueta):** Selecciona a la etiqueta definida, se utiliza para normalizar.
     -   _Ejemplos:_
     ```CSS
     h1 {
         color: tomato;
     }
     ```
--   **Selector de Clase:** Selecciona la Clase definida en el HTML.
+-   **Selector de Clase `.class`:** Selecciona la clase definida en el HTML.
     -   _Ejemplos:_
     ```CSS
     .fondo {
         background-color: #ff5f52;
     }
     ```
--   **Selector de ID:** Selecciona el ID definida del HTML.
+-   **Selector de ID `#`:** Selecciona el ID definida del HTML. Se recomienda utilizar en anclas de HTML y seleccionar el objeto a traves de JS.
     -   _Ejemplos:_
     ```CSS
     #menu {
         color: #2a2a2a;
     }
     ```
--   **Selectores de Atributo**: Selecciona con los atributos descritos.
+
+### Selectores Compuestos
+
+-   **Selectores Agrupados `A,B,C`:** es una anidación de selectores. Es necesario separa con `,`
 
     -   _Ejemplos:_
 
     ```CSS
-      /* Elementos <a> con un atributo title */
-      a[title] {
-        color: purple;
-      }
-
-      /* Elementos <a> con un href que coincida con "https://example.org" */
-      a[href="https://example.org"] {
-        color: green;
-      }
-
-      /* Elementos <a> con un href que contenga "example" */
-      a[href*="example"] {
-        font-size: 2em;
-      }
-
-      /* Elementos <a> con un href que comience con "#" */
-      a[href^="#"] {
-        color: #001978;
-      }
-
-      /* Elementos <a> con un href que termine en ".org" */
-      a[href$=".org"] {
-        font-style: italic;
-      }
-
-      /* Elementos <a> cuyo atributo class contenga la palabra "logo" */
-      a[class~="logo"] {
-        padding: 2px;
-      }
+    .fondo, h1, #menu {
+        background-color: salmon;
+    }
     ```
 
-### Tipos de selectores
+-   **Selectores combinados `A.B`:** que cooncidan en los selectores nombrados, se crea un único selector; tiene que estar separado por un `·` y sin espacio.
 
--   Selectores de hermanos adyacentes `A + B`
--   Selectores de hermanos generales `A ~ B`
--   Selectores de hijo directo `A > B` (Busca en primer Nivel)
--   Selectores de descendiente `A B` (Busca en cualquier nivel)
     -   _Ejemplos:_
+
     ```CSS
-    .fondo .menu {
+    h1.title. {
+        background-color: orange;
+    }
+    ```
+
+-   **Selectores descendientes `A B`:** se crea el patron de padre, hijo y nietos.(Busca en cualquier nivel)
+
+    -   _Ejemplos:_
+
+    ```CSS
+    ul li {
         color: yellow;
     }
     ```
--   Anidacion de selectores `A,B,C` - _Ejemplos:_
-    `CSS .fondo, h1, #menu { background-color: #ff5f52; }`
+
+### Selectores de Operadores
+
+-   **Selectores de hijo directo `A > B`:** (Busca en primer Nivel)
+
+    -   _Ejemplos:_
+
+    ```CSS
+    body > header {
+        background-color: green;
+    }
+    ```
+
+-   **Selectores de hermano adyacente `A + B`:** Todo `<div>` que este despues de `<p>`.
+
+    -   _Ejemplos:_
+
+    ```CSS
+    p + div {
+        margin: 1rem;
+    }
+    ```
+
+-   **Selectores de hermanos generales(siguientes) `A ~ B`:** Selecciona a todos los `<p>` que esten despues del `<h2>`, no importa la ubicación
+
+    -   _Ejemplos:_
+
+    ```CSS
+    h2 ~ p {
+        font-size: 1.2em
+    }
+    ```
+
+### Selectores de Atributo
+
+-   Con **Atributo:** Selecciona con los atributos descritos.
+
+    -   _Ejemplos:_
+
+    ```CSS
+        /* Elementos <a> con un atributo title */
+        a[title] {
+        color: purple;
+        }
+        /* Elementos <input> con un atributo type="submit" */
+        input[type="submit"] {
+            border: 1px dashed yellow;
+        }
+    ```
+
+-   Que **Coincida:**
+
+    -   _Ejemplos:_
+
+    ```CSS
+        /* Elementos <a> con un href que coincida con "https://example.org" */
+        a[href="https://example.org"] {
+        color: green;
+        }
+    ```
+
+-   Que **Contenga:**
+
+    -   _Ejemplos:_
+
+    ```CSS
+    /* Elementos <a> con un href que contenga "example" */
+    a[href*="example"] {
+        font-size: 2em;
+    }
+    ```
+
+-   Que **Comience:**
+
+    -   _Ejemplos:_
+
+    ```CSS
+    /* Elementos <a> con un href que comience con "https" */
+    a[href^="https"] {
+        color: #001978;
+    }
+    ```
+
+-   Que **Termine:**
+
+    -   _Ejemplos:_
+
+    ```CSS
+    /* Elementos <a> con un href que termine en ".org" */
+    a[href$=".org"] {
+        font-style: italic;
+    }
+    ```
+
+-   Que **Contenga:**
+
+    -   _Ejemplos:_
+
+    ```CSS
+    /* Elementos <a> cuyo atributo class contenga la palabra "logo" */
+    a[class~="logo"] {
+        padding: 2px;
+    }
+    ```
 
 [⬆ back to top](#table-of-contents)
 
 ## Herencia
 
-La herencia permite declarar propiedades en elementos de nivel alto y que estas propiedades se transmitan a todos los elementos descendientes. Sólo algunas propiedades se heredan por defecto. pero la herencia puede forzarse mediante la palabra clave inherit.
+La herencia permite declarar propiedades en elementos de nivel alto y que estas propiedades se transmitan a todos los elementos descendientes. Sólo algunas propiedades se heredan por defecto, pero la herencia puede forzarse mediante la palabra clave inherit.
 
-### Forzar la herencia
+### Forzar herencia
 
 Para forzar la herencia se utiliza la palabra clave `inherit`:
 
@@ -166,6 +312,7 @@ Para forzar la herencia se utiliza la palabra clave `inherit`:
 ```
 
 ```CSS
+/* hereda el color del body que es negro */
 a {
     color: inherit;
 }
@@ -181,13 +328,16 @@ El nivel de especifidad es de la sigueinte forma:
 
 ### ¿Cómo se calcula la especifidad?
 
-| Descripcion          | Valor |
-| -------------------- | ----- |
-| Etiqueta             | 1     |
-| Clases y seudoclases | 10    |
-| ID                   | 100   |
-| Estilos en linea     | 1000  |
+| Descripcion                      | Valor |
+| -------------------------------- | ----- |
+| Etiqueta y pseudoelementos       | 1     |
+| Clases, atributos y pseudoclases | 10    |
+| ID                               | 100   |
+| Estilos en linea                 | 1000  |
 
+### Tools
+
+[Graficar especificidad](https://jonassebastianohlsson.com/specificity-graph/)
 [⬆ back to top](#table-of-contents)
 
 ## Cascada
@@ -244,7 +394,9 @@ Si el nombre de la fuente tiene mas de dos letras se recominda poner entre comil
 
 _[⬆ back to top](#table-of-contents)_
 
-## Variables CSS
+## Custom Properties
+
+### Variables CSS
 
 **[⬆ back to top](#table-of-contents)**
 
