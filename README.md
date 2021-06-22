@@ -43,6 +43,8 @@ Aqui te muestro una timeline de CSS
 -   [The future of style (_Future_)](https://www.w3.org/Style/CSS/Planet/)
 -   [Challenges for CSS](https://www.w3.org/Style/CSS20/challenges.html)
 
+[⬆ back to top](#table-of-contents)
+
 ## Enlazar CSS a HTML
 
 Existen varias maneras de hacer linking CSS to HTML:
@@ -339,6 +341,7 @@ El nivel de especifidad es de la sigueinte forma:
 ### Tools
 
 [Graficar especificidad](https://jonassebastianohlsson.com/specificity-graph/)
+
 [⬆ back to top](#table-of-contents)
 
 ## Cascada
