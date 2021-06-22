@@ -290,7 +290,7 @@ Esta es la infografía mejor explicada.
     }
     ```
 
-> ℹ Especificación: [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/) │ [Level 4](https://www.w3.org/TR/selectors-4/) │ [List of All Levels](https://css4-selectors.com/selectors/)
+> ℹ Especificación: _W3C_ - [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/) │ [Level 4](https://www.w3.org/TR/selectors-4/) │ [List of All Levels](https://css4-selectors.com/selectors/)
 
 [⇡ back to top](#table-of-contents)
 
