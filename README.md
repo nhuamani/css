@@ -9,21 +9,21 @@ Otras Guías de Estilos
 -   [HTML](https://github.com/nhuamani/html)
 -   [JavaScript](https://github.com/nhuamani/javascript)
 -   [GIT](https://github.com/nhuamani/git)
--   [SASS]((https://github.com/nhuamani/css/sass)
 
 ## Table of Contents
 
 1. [Historia](#Historia)
 2. [Enlazar CSS a HTML](#enlazar-css-a-html)
-3. [Selectores](#selectores)
-4. [Herencia](#herencia)
-5. [Especificidad](#especificidad)
-6. [Cascada](#cascada)
-7. [Texto](#texto)
-8. [Resources](#resources)
-9. [Custom Properties](#custom-properties)
-10. [Metodologias CSS](#metodologias-css)
-11. [Source](#Source)
+3. [Sintaxis de CSS](#sintaxis-de-css)
+4. [Selectores](#selectores)
+5. [Herencia](#herencia)
+6. [Especificidad](#especificidad)
+7. [Cascada](#cascada)
+8. [Texto](#texto)
+9. [Resources](#resources)
+10. [Custom Properties](#custom-properties)
+11. [Metodologias CSS](#metodologias-css)
+12. [Source](#Source)
 
 ---
 
@@ -34,7 +34,7 @@ Otras Guías de Estilos
 -   **Cascada**
 -   **Especifidad**
 
-## Historia
+## 1. Historia
 
 Aqui te muestro una timeline de CSS
 
@@ -43,7 +43,7 @@ Aqui te muestro una timeline de CSS
 -   [The future of style (_Future_)](https://www.w3.org/Style/CSS/Planet/)
 -   [Challenges for CSS](https://www.w3.org/Style/CSS20/challenges.html)
 
-## Enlazar CSS a HTML
+## 2. Enlazar CSS a HTML
 
 Existen varias maneras de hacer linking CSS to HTML:
 
@@ -111,7 +111,7 @@ Existen varias maneras de hacer linking CSS to HTML:
 
 [⬆ back to top](#table-of-contents)
 
-## Sintaxis de CSS
+## 3. Sintaxis de CSS
 
 Esta es la infografía mejor explicada.
 
