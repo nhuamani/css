@@ -290,7 +290,7 @@ La herencia permite declarar propiedades en elementos de nivel alto y que estas 
 Para forzar la herencia se utiliza la palabra clave `inherit`:
 
 ```HTML
-/* Example por defecto los enlaces son de color azul */
+<!-- Example por defecto los enlaces son de color azul -->
 
 <p>Haga click <a href="#">aquí</a></p>
 ```
@@ -370,8 +370,6 @@ Puedes utilizar las fuentes de:
 Si el nombre de la fuente tiene mas de dos letras se recominda poner entre comillas.
 
 ```css
-/*Example*/
-
 h1 {
   font-family: Verdana, serif;
   font-family: "Times New Roman", serif;
