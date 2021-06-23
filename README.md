@@ -36,7 +36,7 @@ Otras Guías de Estilos
 
 ## Historia
 
-Aqui te muestro una timeline de CSS
+Aqui te muestro un timeline de CSS.
 
 -   [History of CSS (_Past_)](https://www.w3.org/Style/CSS20/history.html)
 -   [CSS Snapshot 2018 (_Present_)](https://www.w3.org/TR/css-2018/)
@@ -52,14 +52,16 @@ Existen varias maneras de hacer linking CSS to HTML:
 -   Inline
 
     ```html
-    <!-- 1° forma Inline-->
+    <!-- 1° forma Inline -->
+
     <body style="color: lemon;"></body>
     ```
 
 -   Embedded
 
     ```html
-    <!-- 2° forma embedded-->
+    <!-- 2° forma embedded -->
+
     <head>
         <style>
             body {
@@ -87,7 +89,7 @@ Existen varias maneras de hacer linking CSS to HTML:
     ```
 
     ```html
-    <!-- 3° forma extern-->
+    <!-- 3° forma extern -->
 
     <!-- En HTML -->
     <head>
@@ -107,7 +109,8 @@ Existen varias maneras de hacer linking CSS to HTML:
     En CSS tambien podemos importar de la misma forma solo basta poner la **_at-rules_** `@import`.
 
     ```css
-    /* En CSS */
+    /* En un archivo CSS */
+
     @import url('styles.css');
     ```
 
@@ -117,7 +120,7 @@ Existen varias maneras de hacer linking CSS to HTML:
 
 Esta es la infografía mejor explicada.
 
-![](https://edteam-media.s3.amazonaws.com/community/original/2b459054-9ca1-4731-9786-2e92d810c824.jpg)
+![Sintaxis de CSS](https://edteam-media.s3.amazonaws.com/community/original/2b459054-9ca1-4731-9786-2e92d810c824.jpg)
 
 > Si quieres mas detalles revisa en el siguiente enlace. [CSS Bucabulary](http://apps.workflower.fi/vocabs/css/en#rule-set)
 
@@ -126,29 +129,29 @@ Esta es la infografía mejor explicada.
 ### Selectores Simples
 
 -   **Selector Universal `*`:** Selecciona a todos los elementos.
-    -   _Ejemplos:_
-    ```CSS
+
+    ```css
     * {
         color: tomato;
     }
     ```
 -   **Selectores de Tipo `<body>`(etiqueta):** Selecciona a la etiqueta definida, se utiliza para normalizar.
-    -   _Ejemplos:_
-    ```CSS
+
+    ```css
     h1 {
         color: tomato;
     }
     ```
 -   **Selector de Clase `.class`:** Selecciona la clase definida en el HTML.
-    -   _Ejemplos:_
-    ```CSS
+
+    ```css
     .fondo {
         background-color: #ff5f52;
     }
     ```
 -   **Selector de ID `#`:** Selecciona el ID definida del HTML. Se recomienda utilizar en anclas de HTML y seleccionar el objeto a traves de JS.
-    -   _Ejemplos:_
-    ```CSS
+
+    ```css
     #menu {
         color: #2a2a2a;
     }
@@ -158,9 +161,7 @@ Esta es la infografía mejor explicada.
 
 -   **Selectores Agrupados `A,B,C`:** es una anidación de selectores. Es necesario separa con `,`
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     .fondo, h1, #menu {
         background-color: salmon;
     }
@@ -168,19 +169,15 @@ Esta es la infografía mejor explicada.
 
 -   **Selectores combinados `A.B`:** que cooncidan en los selectores nombrados, se crea un único selector; tiene que estar separado por un `·` y sin espacio.
 
-    -   _Ejemplos:_
-
-    ```CSS
-    h1.title. {
+    ```css
+    h1.title {
         background-color: orange;
     }
     ```
 
 -   **Selectores descendientes `A B`:** se crea el patron de padre, hijo y nietos.(Busca en cualquier nivel)
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     ul li {
         color: yellow;
     }
@@ -190,9 +187,7 @@ Esta es la infografía mejor explicada.
 
 -   **Selectores de hijo directo `A > B`:** (Busca en primer Nivel)
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     body > header {
         background-color: green;
     }
@@ -200,9 +195,7 @@ Esta es la infografía mejor explicada.
 
 -   **Selectores de hermano adyacente `A + B`:** Todo `<div>` que este despues de `<p>`.
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     p + div {
         margin: 1rem;
     }
@@ -210,9 +203,7 @@ Esta es la infografía mejor explicada.
 
 -   **Selectores de hermanos generales(siguientes) `A ~ B`:** Selecciona a todos los `<p>` que esten despues del `<h2>`, no importa la ubicación
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     h2 ~ p {
         font-size: 1.2em
     }
@@ -222,36 +213,35 @@ Esta es la infografía mejor explicada.
 
 -   Con **Atributo:** Selecciona con los atributos descritos.
 
-    -   _Ejemplos:_
+    ```css
+    /* Elementos <a> con un atributo title */
 
-    ```CSS
-        /* Elementos <a> con un atributo title */
-        a[title] {
+    a[title] {
         color: purple;
-        }
-        /* Elementos <input> con un atributo type="submit" */
-        input[type="submit"] {
-            border: 1px dashed yellow;
-        }
+    }
+
+    /* Elementos <input> con un atributo type="submit" */
+
+    input[type="submit"] {
+        border: 1px dashed yellow;
+    }
     ```
 
 -   Que **Coincida:**
 
-    -   _Ejemplos:_
+    ```css
+    /* Elementos <a> con un href que coincida con "https://example.org" */
 
-    ```CSS
-        /* Elementos <a> con un href que coincida con "https://example.org" */
-        a[href="https://example.org"] {
+    a[href="https://example.org"] {
         color: green;
-        }
+    }
     ```
 
 -   Que **Contenga:**
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     /* Elementos <a> con un href que contenga "example" */
+
     a[href*="example"] {
         font-size: 2em;
     }
@@ -259,10 +249,9 @@ Esta es la infografía mejor explicada.
 
 -   Que **Comience:**
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     /* Elementos <a> con un href que comience con "https" */
+
     a[href^="https"] {
         color: #001978;
     }
@@ -270,10 +259,9 @@ Esta es la infografía mejor explicada.
 
 -   Que **Termine:**
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     /* Elementos <a> con un href que termine en ".org" */
+
     a[href$=".org"] {
         font-style: italic;
     }
@@ -281,35 +269,35 @@ Esta es la infografía mejor explicada.
 
 -   Que **Contenga:**
 
-    -   _Ejemplos:_
-
-    ```CSS
+    ```css
     /* Elementos <a> cuyo atributo class contenga la palabra "logo" */
+
     a[class~="logo"] {
         padding: 2px;
     }
     ```
 
-> ℹ Especificación: _W3C_ - [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/) │ [Level 4](https://www.w3.org/TR/selectors-4/) │ [List of All Levels](https://css4-selectors.com/selectors/)
+> ℹ _W3C_ - [Level 3 (Actual)](https://www.w3.org/TR/selectors-3/) │ [Level 4](https://www.w3.org/TR/selectors-4/) │ [List of All Levels](https://css4-selectors.com/selectors/)
 
 [⇡ back to top](#table-of-contents)
 
 ## Herencia
 
-La herencia permite declarar propiedades en elementos de nivel alto y que estas propiedades se transmitan a todos los elementos descendientes. Sólo algunas propiedades se heredan por defecto, pero la herencia puede forzarse mediante la palabra clave inherit.
+La herencia permite declarar propiedades en elementos de nivel alto y que estas propiedades se transmitan a todos los elementos descendientes. Sólo algunas propiedades se heredan por defecto, pero la herencia puede forzarse mediante la palabra clave `inherit`.
 
 ### Forzar herencia
 
 Para forzar la herencia se utiliza la palabra clave `inherit`:
 
--   _Ejemplos:_ por defecto los enlaces son de color azul.
-
 ```HTML
+/* Example por defecto los enlaces son de color azul */
+
 <p>Haga click <a href="#">aquí</a></p>
 ```
 
-```CSS
-/* hereda el color del body que es negro */
+```css
+/* Hereda el color del body que es negro */
+
 a {
     color: inherit;
 }
@@ -319,7 +307,7 @@ a {
 
 ## Especificidad
 
-El nivel de especifidad es de la sigueinte forma:
+El nivel de especifidad es de la siguiente forma:
 
 `!important > especificidad > cascada`
 
@@ -381,13 +369,13 @@ Puedes utilizar las fuentes de:
 
 Si el nombre de la fuente tiene mas de dos letras se recominda poner entre comillas.
 
--   _Ejemplos:_
+```css
+/*Example*/
 
-```CSS
-  h1 {
-      font-family: Verdana, serif;
-      font-family: "Times New Roman", serif;
-  }
+h1 {
+  font-family: Verdana, serif;
+  font-family: "Times New Roman", serif;
+}
 ```
 
 [⇡ back to top](#table-of-contents)
